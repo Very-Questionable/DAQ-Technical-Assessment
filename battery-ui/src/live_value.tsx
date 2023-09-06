@@ -7,7 +7,7 @@ interface TemperatureProps {
 
 function LiveValue({ temp } : TemperatureProps) {
 
-  let valueColour = 'white';
+  let valueColour = (temp >= 20 && temp <= 80) ? 'white' : 'red';
 
   return (
       <header className="live-value" style={{ color : valueColour }}>
